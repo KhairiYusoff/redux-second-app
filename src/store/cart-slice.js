@@ -18,6 +18,9 @@ createSlice({
                     totalPrice: newItem.price,
                     name: newItem.title
                 })
+            } else {
+                existingItem.quantity++
+                existingItem.totalPrice = totalPrice + newItem.price
             }
         },
         removeItemFromCart(state, action) { }
