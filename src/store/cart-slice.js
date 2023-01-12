@@ -1,15 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const uiSlice = createSlice({
-    name: 'ui',
-    initialState: { cartIsVisible: false },
+createSlice({
+    name: 'cart',
+    initialState: {
+        items: [],
+        totalQuantity: 0
+    },
     reducers: {
-        toggle(state) {
-            state.cartIsVisible = !state.cartIsVisible
-        }
+        addItemToCart(state, action) {
+            const item = action.payload
+            const existingItem = state.items.find(item => item.id === newItem.id)
+            if (!existingItem) {
+                state.items.push({
+                    itemId: newItem.id,
+                    price: newItem.price,
+                    quantity: 1,
+                    totalPrice: newItem.price,
+                    name: newItem.title
+                })
+            }
+        },
+        removeItemFromCart(state, action) { }
     }
 })
-
-export const uiActions = uiSlice.actions
-
-export default uiSlice
