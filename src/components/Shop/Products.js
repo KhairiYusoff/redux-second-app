@@ -5,13 +5,19 @@ const DUMMY_DATA = [
   {
     id: 'p1',
     price: 6,
-    title: 'My first book',
+    title: 'Calculus',
     description: 'The first book I ever wrote'
   },
   {
     id: 'p2',
     price: 5,
-    title: 'My second book',
+    title: 'C++',
+    description: 'The second book I ever wrote'
+  },
+  {
+    id: 'p3',
+    price: 10,
+    title: 'JavaScript for Dummies',
     description: 'The second book I ever wrote'
   },
 ]
